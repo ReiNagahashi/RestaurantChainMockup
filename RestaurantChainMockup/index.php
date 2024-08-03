@@ -8,16 +8,9 @@ require_once 'vendor/autoload.php';
 
 use Helpers\RandomGenerator;
 
-// クエリ文字列からパラメータを取得
-$min = $_GET['min'] ?? 5;
-$max = $_GET['max'] ?? 20;
-
-// パラメータが整数であることを確認
-$min = (int)$min;
-$max = (int)$max;
-
 // ユーザーの生成
-$users = RandomGenerator::users($min, $max);
+$users = RandomGenerator::users();
+
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +30,6 @@ $users = RandomGenerator::users($min, $max);
     <div class="user-card">
         <!-- ユーザー情報の表示 -->
         <?php echo $user->toHTML(); ?>
-
     </div>
     <?php endforeach; ?>
 

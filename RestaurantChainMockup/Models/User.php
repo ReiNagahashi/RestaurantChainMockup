@@ -101,7 +101,6 @@ class User implements FileConvertible{
                 - Phone Number: {$this->phoneNumber}
                 - Address: {$this->address}
                 - Birth Date: {$this->birthDate}
-                - Is Active: {$this->isActive}
                 - Role: {$this->role}";
     }
 
@@ -111,11 +110,10 @@ class User implements FileConvertible{
             'firstName' => $this->firstName,
             'lastName' => $this->lastName,
             'email' => $this->email,
-            'password' => $this->password,
+            'password' => $this->hashedPassword,
             'phoneNumber' => $this->phoneNumber,
             'address' => $this->address,
             'birthDate' => $this->birthDate,
-            'isActive' => $this->isActive,
             'role' => $this->role
         ];
     }
