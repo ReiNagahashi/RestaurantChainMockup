@@ -29,12 +29,10 @@ class RandomGenerator {
     }
 
 
-    public static function users(): array {
-        $faker = Factory::create();
+    public static function users(int $number): array {
         $users = [];
-        $numOfUsers = $faker->randomDigit();
 
-        for ($i = 0; $i < $numOfUsers; $i++) {
+        for ($i = 0; $i < $number; $i++) {
             $users[] = self::user();
         }
 
@@ -60,12 +58,10 @@ class RandomGenerator {
         );
     }
 
-    public static function companies(): array {
-        $faker = Factory::create();
+    public static function companies(int $number): array {
         $companies = [];
-        $numOfCompanies = $faker->randomDigit();
 
-        for ($i = 0; $i < $numOfCompanies; $i++) {
+        for ($i = 0; $i < $number; $i++) {
             $companies[] = self::company();
         }
 
@@ -85,12 +81,10 @@ class RandomGenerator {
         );
     }
 
-    public static function employees(): array {
-        $faker = Factory::create();
+    public static function employees(int $number): array {
         $employees = [];
-        $numOfEmployees = $faker->randomDigit();
 
-        for ($i = 0; $i < $numOfEmployees; $i++) {
+        for ($i = 0; $i < $number; $i++) {
             $employees[] = self::employee();
         }
 
@@ -110,12 +104,10 @@ class RandomGenerator {
         );
     }
 
-    public static function restaurantChains(): array {
-        $faker = Factory::create();
+    public static function restaurantChains(int $number): array {
         $restaurantChains = [];
-        $numOfChains = $faker->randomDigit();
 
-        for ($i = 0; $i < $numOfChains; $i++) {
+        for ($i = 0; $i < $number; $i++) {
             $restaurantChains[] = self::restaurantChain();
         }
 
@@ -138,12 +130,10 @@ class RandomGenerator {
         );
     }
 
-    public static function restaurantLocations(): array {
-        $faker = Factory::create();
+    public static function restaurantLocations(int $number): array {
         $locations = [];
-        $numOfLocations = $faker->randomDigit();
 
-        for ($i = 0; $i < $numOfLocations; $i++) {
+        for ($i = 0; $i < $number; $i++) {
             $locations[] = self::restaurantLocation();
         }
 

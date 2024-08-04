@@ -9,7 +9,7 @@ require_once 'vendor/autoload.php';
 use Helpers\RandomGenerator;
 
 // ユーザーの生成
-$users = RandomGenerator::users();
+$users = RandomGenerator::users(10);
 
 ?>
 
